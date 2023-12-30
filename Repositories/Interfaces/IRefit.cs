@@ -2,8 +2,8 @@ using Refit;
 
 namespace API.Repositories.Interfaces;
 
-public interface IIntegrationRefit<TModelExternal>
+public interface IRefit<TModelExternal>
 {
-    [Get("{path}")]
+    [Get("/{path}")]
     Task<ApiResponse<TModelExternal>> Get(string path);
 }

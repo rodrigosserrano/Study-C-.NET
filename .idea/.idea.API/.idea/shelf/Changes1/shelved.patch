@@ -1,0 +1,38 @@
+Index: .idea/.idea.API/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.API/.idea/encodings.xml b/.idea/.idea.API/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1703898849938)
++++ b/.idea/.idea.API/.idea/encodings.xml	(date 1703898849938)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise" />
++</project>
+\ No newline at end of file
+Index: .idea/.idea.API/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.API/.idea/.gitignore b/.idea/.idea.API/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1703898870298)
++++ b/.idea/.idea.API/.idea/.gitignore	(date 1703898870298)
+@@ -0,0 +1,13 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Rider ignored files
++/contentModel.xml
++/.idea.API.iml
++/modules.xml
++/projectSettingsUpdater.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml

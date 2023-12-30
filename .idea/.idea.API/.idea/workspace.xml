@@ -19,8 +19,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "rodrigosserrano"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8e593ddb-0264-4c71-a646-0ac7e4bdb292" />
+        <option name="url" value="https://github.com/rodrigosserrano/ToDo-API.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Net.Http/src/System/Net/Http/HttpResponseMessage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/837ffc1b8bab98ded4a9a5fd2b51e544a84c2a69158747bf777adefe994bf78e/ApiResponse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -39,7 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.API: http.executor": "Run",
+    ".NET Launch Settings Profile.API: http.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -126,7 +144,7 @@
       <workItem from="1703898854779" duration="135000" />
       <workItem from="1703899009702" duration="267000" />
       <workItem from="1703954579838" duration="58000" />
-      <workItem from="1703954661757" duration="3103000" />
+      <workItem from="1703954661757" duration="14420000" />
     </task>
     <servers />
   </component>

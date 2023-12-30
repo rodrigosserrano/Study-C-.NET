@@ -1,4 +1,5 @@
 ﻿using API.Data.Map;
+using API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data

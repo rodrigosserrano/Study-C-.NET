@@ -1,20 +1,22 @@
+using API.Data;
+using API.Models;
+using API.Repositories;
+using API.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API.Data;
-using API.Repositories;
-using API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using Refit;
 
 namespace API
 {
@@ -37,8 +39,16 @@ namespace API
                     )
                 );
 
+            // Configure refit for each external model
+            services.AddRefitClient<IRefit<ViaCepModel>>()
+                .ConfigureHttpClient(
+                    i => i.BaseAddress = new Uri("https://viacep.com.br")
+                );
+            
             // Configure DI
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IRepository<UsuarioModel>, UsuarioRepository>()
+                .AddScoped<IRepository<TarefaModel>, TarefaRepository>()
+                .AddScoped<IIntegration<ViaCepModel>, ViaCepRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

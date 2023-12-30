@@ -16799,8 +16799,8 @@
     </schema>
     <schema id="5561" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-12-30.11:27:40.100</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2023-12-30.17:27:40</LastIntrospectionLocalTimestamp>
+      <IntrospectionTimestamp>2023-12-30.12:03:14.580</IntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2023-12-30.18:03:14</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5562" parent="5510" name="guest">
@@ -16812,7 +16812,7 @@
     <table id="5564" parent="5561" name="Tarefas">
       <CreatedTimestamp>2023-12-29.18:45:27.707</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2023-12-29.18:45:27.707</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-12-30.12:02:30.747</ModifiedTimestamp>
       <ObjectId>917578307</ObjectId>
       <LedgerViewId>0</LedgerViewId>
       <LobDataSpaceId>0</LobDataSpaceId>
@@ -16820,7 +16820,7 @@
     <table id="5565" parent="5561" name="Usuarios">
       <CreatedTimestamp>2023-12-29.18:45:27.707</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2023-12-29.18:45:27.707</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-12-30.12:02:30.747</ModifiedTimestamp>
       <ObjectId>949578421</ObjectId>
       <LedgerViewId>0</LedgerViewId>
       <LobDataSpaceId>0</LobDataSpaceId>
@@ -16853,83 +16853,105 @@
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="5571" parent="5564" name="PK_Tarefas">
+    <column id="5571" parent="5564" name="UsuarioId">
+      <DasType>int|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="5572" parent="5564" name="FK_Tarefas_Usuarios_UsuarioId">
+      <ColNames>UsuarioId</ColNames>
+      <CreatedTimestamp>2023-12-30.12:02:30.743</CreatedTimestamp>
+      <ModifiedTimestamp>2023-12-30.12:02:30.743</ModifiedTimestamp>
+      <ObjectId>1205579333</ObjectId>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>949578421</RefTableId>
+      <RefTableName>Usuarios</RefTableName>
+    </foreign-key>
+    <index id="5573" parent="5564" name="PK_Tarefas">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5572" parent="5564" name="PK_Tarefas">
+    <index id="5574" parent="5564" name="IX_Tarefas_UsuarioId">
+      <ColNames>UsuarioId</ColNames>
+      <Position>2</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5575" parent="5564" name="PK_Tarefas">
       <CreatedTimestamp>2023-12-29.18:45:27.707</CreatedTimestamp>
       <ModifiedTimestamp>2023-12-29.18:45:27.707</ModifiedTimestamp>
       <ObjectId>933578364</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Tarefas</UnderlyingIndexName>
     </key>
-    <column id="5573" parent="5565" name="Id">
+    <column id="5576" parent="5565" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(4)</SequenceIdentity>
     </column>
-    <column id="5574" parent="5565" name="Name">
+    <column id="5577" parent="5565" name="Name">
       <DasType>nvarchar(255 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5575" parent="5565" name="Email">
+    <column id="5578" parent="5565" name="Email">
       <DasType>nvarchar(128 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="5576" parent="5565" name="PK_Usuarios">
+    <index id="5579" parent="5565" name="PK_Usuarios">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5577" parent="5565" name="PK_Usuarios">
+    <key id="5580" parent="5565" name="PK_Usuarios">
       <CreatedTimestamp>2023-12-29.18:45:27.707</CreatedTimestamp>
       <ModifiedTimestamp>2023-12-29.18:45:27.707</ModifiedTimestamp>
       <ObjectId>965578478</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Usuarios</UnderlyingIndexName>
     </key>
-    <column id="5578" parent="5566" name="MigrationId">
+    <column id="5581" parent="5566" name="MigrationId">
       <DasType>nvarchar(150 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5579" parent="5566" name="ProductVersion">
+    <column id="5582" parent="5566" name="ProductVersion">
       <DasType>nvarchar(32 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="5580" parent="5566" name="PK___EFMigrationsHistory">
+    <index id="5583" parent="5566" name="PK___EFMigrationsHistory">
       <Clustering>1</Clustering>
       <ColNames>MigrationId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5581" parent="5566" name="PK___EFMigrationsHistory">
+    <key id="5584" parent="5566" name="PK___EFMigrationsHistory">
       <CreatedTimestamp>2023-12-29.18:45:27.667</CreatedTimestamp>
       <ModifiedTimestamp>2023-12-29.18:45:27.667</ModifiedTimestamp>
       <ObjectId>901578250</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
     </key>
-    <partition id="5582" parent="5571">
+    <partition id="5585" parent="5573">
       <ObjectId>72057594043236352</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5583" parent="5576">
+    <partition id="5586" parent="5574">
+      <ObjectId>72057594043367424</ObjectId>
+      <Position>1</Position>
+    </partition>
+    <partition id="5587" parent="5579">
       <ObjectId>72057594043301888</ObjectId>
       <Position>1</Position>
     </partition>
-    <partition id="5584" parent="5580">
+    <partition id="5588" parent="5583">
       <ObjectId>72057594043170816</ObjectId>
       <Position>1</Position>
     </partition>
